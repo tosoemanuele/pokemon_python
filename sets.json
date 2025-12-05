@@ -1,0 +1,72 @@
+{
+    "salamence": {
+        "species": "salamence",
+        "moves": [
+            "return",
+            "earthquake",
+            "roost",
+            "dragondance"
+        ],
+        "item": "salamencite",
+        "nature": "jolly",
+        "ability":"intimidate",
+        "evs": [4, 252, 4, 0, 12, 236],
+        "ivs": [31, 31, 31, 31, 31, 31]
+    },
+    "tapukoko": {
+        "species": "tapukoko",
+        "moves": [
+            "thunderbolt",
+            "dazzlinggleam",
+            "grassknot",
+            "bravebird"
+        ],
+        "item": "lifeorb",
+        "nature": "naive",
+        "ability":"electricsurge",
+        "evs": [0, 4, 0, 252, 0, 252],
+        "ivs": [31, 31, 31, 31, 31, 31]
+    },
+    "suicune": {
+        "species": "suicune",
+        "moves": [
+            "icywind",
+            "calmmind",
+            "icebeam",
+            "scald"
+        ],
+        "item": "leftovers",
+        "nature": "bold",
+        "ability": "pressure",
+        "evs": [196, 0, 252, 0, 0, 60],
+        "ivs": [31, 31, 31, 31, 31, 31]
+    },
+    "bulbasaur": {
+        "species": "bulbasaur",
+        "moves": [
+            "pound",
+            "absorb",
+            "mist",
+            "poisonpowder"
+        ],
+        "item": "venusaurite",
+        "nature": "jolly",
+        "ability":"overgrow",
+        "evs": [0, 0, 0, 252, 4, 252],
+        "ivs": [31, 31, 31, 31, 31, 31]
+    },
+    "venusaur": {
+        "species": "venusaur",
+        "moves": [
+            "pound",
+            "facade",
+            "return",
+            "sludgebomb"
+        ],
+        "item": "venusaurite",
+        "nature": "jolly",
+        "ability":"overgrow",
+        "evs": [0, 0, 0, 252, 4, 252],
+        "ivs": [31, 31, 31, 31, 31, 31]
+    }
+}
