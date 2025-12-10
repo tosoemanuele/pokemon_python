@@ -62,13 +62,6 @@ def generate_standard_set(pokemon_number: int, domain_all, standard_set):
 
     return pokemon
 
-
-
-
-
-
-# |--------- OLD OR UNUSED FUNCTIONS (MAY NEED FOR LATER) -----------|
-
 def generate_pokemon(pokemon_number : int, domain_all):
     pokemon = {}
     pokedex = list(domain_all)
@@ -106,6 +99,11 @@ def generate_pokemon(pokemon_number : int, domain_all):
     pokemon['ivs'] = [31, 31, 31, 31, 31, 31]
 
     return pokemon
+
+
+
+
+# |--------- OLD OR UNUSED FUNCTIONS (MAY NEED FOR LATER) -----------|
 
 
 def array_to_dict(pokemon_arr, inv_items, inv_abilities, inv_pokedex, inv_natures, inv_moves):

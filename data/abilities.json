@@ -1470,7 +1470,7 @@
         "desc": "This Pokemon's Special Attack is raised by 1 stage when another Pokemon faints.",
         "shortDesc": "This Pokemon's Sp. Atk is raised by 1 stage when another Pokemon faints.",
         "id": "soulheart",
-        "name": "Soul-Heart",
+        "name": "SoulHeart",
         "rating": 3.5,
         "num": 220
     },

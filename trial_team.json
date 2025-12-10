@@ -1,44 +1,27 @@
 {
-    "salamence": {
-        "species": "salamence",
-        "moves": [
-            "return",
-            "earthquake",
-            "roost",
-            "dragondance"
-        ],
-        "item": "salamencite",
+    "zekrom": {
+        "species": "zekrom",
+        "moves": ["fusionbolt", "outrage", "boltstrike", "substitute"],
+        "item": "choiceband",
         "nature": "jolly",
-        "ability":"intimidate",
-        "evs": [4, 252, 4, 0, 12, 236],
-        "ivs": [31, 31, 31, 31, 31, 31]
-    },
-    "tapukoko": {
-        "species": "tapukoko",
-        "moves": [
-            "thunderbolt",
-            "dazzlinggleam",
-            "grassknot",
-            "bravebird"
-        ],
-        "item": "lifeorb",
-        "nature": "naive",
-        "ability":"electricsurge",
-        "evs": [0, 4, 0, 252, 0, 252],
-        "ivs": [31, 31, 31, 31, 31, 31]
-    },
-    "suicune": {
-        "species": "suicune",
-        "moves": [
-            "icywind",
-            "calmmind",
-            "icebeam",
-            "scald"
-        ],
-        "item": "leftovers",
-        "nature": "bold",
-        "ability":"pressure",
-        "evs": [196, 0, 252, 0, 0, 60],
-        "ivs": [31, 31, 31, 31, 31, 31]
-    }
+        "ability": "teravolt",
+        "evs": [0, 252, 4, 0, 0, 252],
+        "ivs": [31, 31, 31, 31, 31, 31]},
+    "magearna": {
+        "species": "magearna",
+        "moves": ["fleurcannon", "flashcannon", "aurasphere", "voltswitch"],
+        "item": "choicespecs",
+        "nature": "modest",
+        "ability": "soulheart",
+        "evs": [252, 0, 4, 252, 0, 0],
+        "ivs": [31, 0, 31, 31, 31,31]},
+    "metagross":{
+        "species": "metagross",
+        "moves": ["meteormash", "earthquake", "bulletpunch", "agility"],
+        "item": "metagrossite",
+        "nature": "jolly",
+        "ability": "clearbody",
+        "evs": [4, 252, 0, 0, 0, 252],
+        "ivs": [31, 31, 31, 31, 31, 31]}
+
 }
