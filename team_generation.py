@@ -19,6 +19,8 @@ def import_data():
         natures_all = json.load(f)
     with open('data/moves.json') as f:
         moves_all = json.load(f)
+    with open('data/learnsets.json') as f:
+        learnsets_all = json.load(f)
 
     inverse_items_all = {data['num']: item_name for item_name, data in items_all.items()}
     inverse_abilities_all = {data['num']: ability_name for ability_name, data in abilities_all.items()}
@@ -26,8 +28,8 @@ def import_data():
     inverse_natures_all = {data['num']: nature_name for nature_name, data in natures_all.items()}
     inverse_moves_all = {data['num']: move_name for move_name, data in moves_all.items()}
 
-    return (domain_all, items_all, abilities_all, pokedex_all, natures_all, moves_all, inverse_items_all,
-            inverse_abilities_all, inverse_pokedex_all, inverse_natures_all, inverse_moves_all)
+    return (domain_all, items_all, abilities_all, pokedex_all, natures_all, moves_all, learnsets_all,
+            inverse_items_all, inverse_abilities_all, inverse_pokedex_all, inverse_natures_all, inverse_moves_all)
 
 
 def is_team_valid(team):

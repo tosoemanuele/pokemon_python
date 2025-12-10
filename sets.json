@@ -1,72 +1,2494 @@
 {
-    "salamence": {
-        "species": "salamence",
-        "moves": [
-            "return",
-            "earthquake",
-            "roost",
-            "dragondance"
-        ],
-        "item": "salamencite",
-        "nature": "jolly",
-        "ability":"intimidate",
-        "evs": [4, 252, 4, 0, 12, 236],
-        "ivs": [31, 31, 31, 31, 31, 31]
-    },
-    "tapukoko": {
-        "species": "tapukoko",
-        "moves": [
-            "thunderbolt",
-            "dazzlinggleam",
-            "grassknot",
-            "bravebird"
-        ],
-        "item": "lifeorb",
-        "nature": "naive",
-        "ability":"electricsurge",
-        "evs": [0, 4, 0, 252, 0, 252],
-        "ivs": [31, 31, 31, 31, 31, 31]
-    },
-    "suicune": {
-        "species": "suicune",
-        "moves": [
-            "icywind",
-            "calmmind",
-            "icebeam",
-            "scald"
-        ],
-        "item": "leftovers",
-        "nature": "bold",
-        "ability": "pressure",
-        "evs": [196, 0, 252, 0, 0, 60],
-        "ivs": [31, 31, 31, 31, 31, 31]
-    },
     "bulbasaur": {
         "species": "bulbasaur",
         "moves": [
-            "pound",
-            "absorb",
-            "mist",
-            "poisonpowder"
+            "sleeppowder",
+            "leechseed",
+            "sludgebomb",
+            "hiddenpowerfire"
         ],
-        "item": "venusaurite",
-        "nature": "jolly",
-        "ability":"overgrow",
-        "evs": [0, 0, 0, 252, 4, 252],
-        "ivs": [31, 31, 31, 31, 31, 31]
+        "item": "eviolite",
+        "nature": "bold",
+        "ability": "overgrow",
+        "evs": [
+            252,
+            0,
+            252,
+            4,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            30,
+            31,
+            30
+        ]
     },
     "venusaur": {
         "species": "venusaur",
         "moves": [
-            "pound",
-            "facade",
-            "return",
-            "sludgebomb"
+            "sludgebomb",
+            "gigadrain",
+            "sleeppowder",
+            "leechseed"
         ],
         "item": "venusaurite",
+        "nature": "bold",
+        "ability": "overgrow",
+        "evs": [
+            248,
+            0,
+            252,
+            0,
+            8,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "incineroar": {
+        "species": "incineroar",
+        "moves": [
+            "fakeout",
+            "flareblitz",
+            "uturn",
+            "knockoff"
+        ],
+        "item": "assaultvest",
+        "nature": "adamant",
+        "ability": "intimidate",
+        "evs": [
+            252,
+            4,
+            0,
+            0,
+            252,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "greninja": {
+        "species": "greninja",
+        "moves": [
+            "hydropump",
+            "icebeam",
+            "darkpulse",
+            "uturn"
+        ],
+        "item": "lifeorb",
+        "nature": "naive",
+        "ability": "protean",
+        "evs": [
+            0,
+            4,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "kyogre": {
+        "species": "kyogre",
+        "moves": [
+            "waterspout",
+            "originpulse",
+            "icebeam",
+            "thunder"
+        ],
+        "item": "blueorb",
+        "nature": "modest",
+        "ability": "drizzle",
+        "evs": [
+            252,
+            0,
+            0,
+            252,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "groudon": {
+        "species": "groudon",
+        "moves": [
+            "precipiceblades",
+            "firepunch",
+            "rockslide",
+            "protect"
+        ],
+        "item": "redorb",
+        "nature": "adamant",
+        "ability": "drought",
+        "evs": [
+            252,
+            252,
+            0,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "xerneas": {
+        "species": "xerneas",
+        "moves": [
+            "geomancy",
+            "dazzlinggleam",
+            "thunderbolt",
+            "moonblast"
+        ],
+        "item": "powerherb",
+        "nature": "modest",
+        "ability": "fairyaura",
+        "evs": [
+            0,
+            0,
+            0,
+            252,
+            4,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "aegislash": {
+        "species": "aegislash",
+        "moves": [
+            "kingsshield",
+            "shadowball",
+            "flashcannon",
+            "substitute"
+        ],
+        "item": "leftovers",
+        "nature": "quiet",
+        "ability": "stancechange",
+        "evs": [
+            252,
+            0,
+            4,
+            252,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            0
+        ]
+    },
+    "landorus": {
+        "species": "landorus",
+        "moves": [
+            "earthquake",
+            "uturn",
+            "stoneedge",
+            "knockoff"
+        ],
+        "item": "choiceband",
+        "nature": "adamant",
+        "ability": "intimidate",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "arceus": {
+        "species": "arceus",
+        "moves": [
+            "judgment",
+            "recover",
+            "icebeam",
+            "flamethrower"
+        ],
+        "item": "dracoplate",
+        "nature": "timid",
+        "ability": "multitype",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "tyranitar": {
+        "species": "tyranitar",
+        "moves": [
+            "stoneedge",
+            "crunch",
+            "pursuit",
+            "stealthrock"
+        ],
+        "item": "choiceband",
+        "nature": "adamant",
+        "ability": "sandstream",
+        "evs": [
+            252,
+            252,
+            0,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "heatran": {
+        "species": "heatran",
+        "moves": [
+            "magmastorm",
+            "toxic",
+            "taunt",
+            "earthpower"
+        ],
+        "item": "leftovers",
+        "nature": "timid",
+        "ability": "flashfire",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "celesteela": {
+        "species": "celesteela",
+        "moves": [
+            "heavyslam",
+            "leechseed",
+            "protect",
+            "earthquake"
+        ],
+        "item": "leftovers",
+        "nature": "impish",
+        "ability": "beastboost",
+        "evs": [
+            252,
+            4,
+            252,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "volcarona": {
+        "species": "volcarona",
+        "moves": [
+            "quiverdance",
+            "fierydance",
+            "bugbuzz",
+            "roost"
+        ],
+        "item": "firiumz",
+        "nature": "timid",
+        "ability": "flamebody",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "blaziken": {
+        "species": "blaziken",
+        "moves": [
+            "flareblitz",
+            "highjumpkick",
+            "swordsdance",
+            "protect"
+        ],
+        "item": "fightiniumz",
+        "nature": "adamant",
+        "ability": "speedboost",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "yveltal": {
+        "species": "yveltal",
+        "moves": [
+            "darkpulse",
+            "oblivionwing",
+            "suckerpunch",
+            "uturn"
+        ],
+        "item": "choiceband",
+        "nature": "hasty",
+        "ability": "darkaura",
+        "evs": [
+            0,
+            252,
+            0,
+            4,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "tapufini": {
+        "species": "tapufini",
+        "moves": [
+            "calmmind",
+            "moonblast",
+            "scald",
+            "taunt"
+        ],
+        "item": "leftovers",
+        "nature": "modest",
+        "ability": "mistysurge",
+        "evs": [
+            252,
+            0,
+            4,
+            252,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "rayquaza": {
+        "species": "rayquaza",
+        "moves": [
+            "dragondance",
+            "extremespeed",
+            "outrage",
+            "dragonascent"
+        ],
+        "item": "flyiniumz",
         "nature": "jolly",
-        "ability":"overgrow",
-        "evs": [0, 0, 0, 252, 4, 252],
-        "ivs": [31, 31, 31, 31, 31, 31]
+        "ability": "airlock",
+        "evs": [
+            0,
+            252,
+            0,
+            0,
+            4,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "zeraora": {
+        "species": "zeraora",
+        "moves": [
+            "plasmafists",
+            "closecombat",
+            "voltswitch",
+            "knockoff"
+        ],
+        "item": "lifeorb",
+        "nature": "jolly",
+        "ability": "voltabsorb",
+        "evs": [
+            0,
+            252,
+            4,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "ferrothorn": {
+        "species": "ferrothorn",
+        "moves": [
+            "spikes",
+            "leechseed",
+            "powerwhip",
+            "gyroball"
+        ],
+        "item": "rockyhelmet",
+        "nature": "relaxed",
+        "ability": "ironbarbs",
+        "evs": [
+            252,
+            4,
+            252,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            0
+        ]
+    },
+    "mewtwo": {
+        "species": "mewtwo",
+        "moves": [
+            "psystrike",
+            "aurasphere",
+            "icebeam",
+            "shadowball"
+        ],
+        "item": "mewtwonitey",
+        "nature": "timid",
+        "ability": "pressure",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "lugia": {
+        "species": "lugia",
+        "moves": [
+            "aeroblast",
+            "roost",
+            "toxic",
+            "dragontail"
+        ],
+        "item": "leftovers",
+        "nature": "bold",
+        "ability": "multiscale",
+        "evs": [
+            252,
+            0,
+            252,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "hooh": {
+        "species": "hooh",
+        "moves": [
+            "sacredfire",
+            "bravebird",
+            "earthquake",
+            "recover"
+        ],
+        "item": "sitrusberry",
+        "nature": "adamant",
+        "ability": "pressure",
+        "evs": [
+            252,
+            252,
+            0,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "zekrom": {
+        "species": "zekrom",
+        "moves": [
+            "fusionbolt",
+            "outrage",
+            "boltstrike",
+            "substitute"
+        ],
+        "item": "choiceband",
+        "nature": "jolly",
+        "ability": "teravolt",
+        "evs": [
+            0,
+            252,
+            4,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "reshiram": {
+        "species": "reshiram",
+        "moves": [
+            "blueflare",
+            "dracometeor",
+            "earthpower",
+            "defog"
+        ],
+        "item": "choicescarf",
+        "nature": "timid",
+        "ability": "turboblaze",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "genesect": {
+        "species": "genesect",
+        "moves": [
+            "technoblast",
+            "uturn",
+            "icebeam",
+            "thunderbolt"
+        ],
+        "item": "choicescarf",
+        "nature": "hasty",
+        "ability": "download",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "deoxys": {
+        "species": "deoxys",
+        "moves": [
+            "spikes",
+            "stealthrock",
+            "taunt",
+            "psychic"
+        ],
+        "item": "focussash",
+        "nature": "timid",
+        "ability": "pressure",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "darkrai": {
+        "species": "darkrai",
+        "moves": [
+            "darkvoid",
+            "darkpulse",
+            "focusblast",
+            "nastyplot"
+        ],
+        "item": "lifeorb",
+        "nature": "timid",
+        "ability": "baddreams",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "skarmory": {
+        "species": "skarmory",
+        "moves": [
+            "spikes",
+            "whirlwind",
+            "bravebird",
+            "roost"
+        ],
+        "item": "rockyhelmet",
+        "nature": "impish",
+        "ability": "sturdy",
+        "evs": [
+            252,
+            0,
+            252,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "chansey": {
+        "species": "chansey",
+        "moves": [
+            "seismictoss",
+            "softboiled",
+            "teleport",
+            "thunderwave"
+        ],
+        "item": "eviolite",
+        "nature": "bold",
+        "ability": "naturalcure",
+        "evs": [
+            248,
+            0,
+            252,
+            0,
+            8,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "latias": {
+        "species": "latias",
+        "moves": [
+            "dracometeor",
+            "psyshock",
+            "recover",
+            "defog"
+        ],
+        "item": "latiasite",
+        "nature": "timid",
+        "ability": "levitate",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "latios": {
+        "species": "latios",
+        "moves": [
+            "dracometeor",
+            "psyshock",
+            "thunderbolt",
+            "surf"
+        ],
+        "item": "latiosite",
+        "nature": "timid",
+        "ability": "levitate",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "scizor": {
+        "species": "scizor",
+        "moves": [
+            "bulletpunch",
+            "uturn",
+            "roost",
+            "swordsdance"
+        ],
+        "item": "scizorite",
+        "nature": "adamant",
+        "ability": "technician",
+        "evs": [
+            248,
+            252,
+            8,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "tornadus": {
+        "species": "tornadus",
+        "moves": [
+            "hurricane",
+            "focusblast",
+            "uturn",
+            "knockoff"
+        ],
+        "item": "choicescarf",
+        "nature": "timid",
+        "ability": "regenerator",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "thundurus": {
+        "species": "thundurus",
+        "moves": [
+            "thunderbolt",
+            "hiddenpowerice",
+            "focusblast",
+            "nastyplot"
+        ],
+        "item": "lifeorb",
+        "nature": "timid",
+        "ability": "prankster",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            30,
+            31,
+            31
+        ]
+    },
+    "tapubulu": {
+        "species": "tapubulu",
+        "moves": [
+            "woodhammer",
+            "superpower",
+            "stoneedge",
+            "hornleech"
+        ],
+        "item": "choicescarf",
+        "nature": "adamant",
+        "ability": "grassysurge",
+        "evs": [
+            0,
+            252,
+            4,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "tapulele": {
+        "species": "tapulele",
+        "moves": [
+            "psyshock",
+            "moonblast",
+            "focusblast",
+            "shadowball"
+        ],
+        "item": "choicespecs",
+        "nature": "timid",
+        "ability": "psychicsurge",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "kartana": {
+        "species": "kartana",
+        "moves": [
+            "leafblade",
+            "smartstrike",
+            "sacredsword",
+            "swordsdance"
+        ],
+        "item": "choicescarf",
+        "nature": "jolly",
+        "ability": "beastboost",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "pheromosa": {
+        "species": "pheromosa",
+        "moves": [
+            "highjumpkick",
+            "bugbuzz",
+            "icebeam",
+            "uturn"
+        ],
+        "item": "choicescarf",
+        "nature": "naive",
+        "ability": "beastboost",
+        "evs": [
+            0,
+            4,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "magearna": {
+        "species": "magearna",
+        "moves": [
+            "fleurcannon",
+            "flashcannon",
+            "aurasphere",
+            "voltswitch"
+        ],
+        "item": "choicespecs",
+        "nature": "modest",
+        "ability": "soulheart",
+        "evs": [
+            252,
+            0,
+            4,
+            252,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "dialga": {
+        "species": "dialga",
+        "moves": [
+            "dracometeor",
+            "flashcannon",
+            "fireblast",
+            "thunderbolt"
+        ],
+        "item": "adamantorb",
+        "nature": "modest",
+        "ability": "pressure",
+        "evs": [
+            252,
+            0,
+            4,
+            252,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "palkia": {
+        "species": "palkia",
+        "moves": [
+            "spacialrend",
+            "hydropump",
+            "thunder",
+            "fireblast"
+        ],
+        "item": "lustrousorb",
+        "nature": "timid",
+        "ability": "pressure",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "giratina": {
+        "species": "giratina",
+        "moves": [
+            "shadowforce",
+            "dracometeor",
+            "aurasphere",
+            "willowisp"
+        ],
+        "item": "griseousorb",
+        "nature": "timid",
+        "ability": "levitate",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "kyurem": {
+        "species": "kyurem",
+        "moves": [
+            "iceshard",
+            "fusionbolt",
+            "iciclespear",
+            "outrage"
+        ],
+        "item": "choicescarf",
+        "nature": "jolly",
+        "ability": "teravolt",
+        "evs": [
+            0,
+            252,
+            4,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "marshadow": {
+        "species": "marshadow",
+        "moves": [
+            "spectralthief",
+            "closecombat",
+            "shadowsneak",
+            "icepunch"
+        ],
+        "item": "marshadiumz",
+        "nature": "jolly",
+        "ability": "technician",
+        "evs": [
+            0,
+            252,
+            4,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "mew": {
+        "species": "mew",
+        "moves": [
+            "nastyplot",
+            "aurasphere",
+            "fireblast",
+            "icebeam"
+        ],
+        "item": "lifeorb",
+        "nature": "timid",
+        "ability": "synchronize",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "jirachi": {
+        "species": "jirachi",
+        "moves": [
+            "ironhead",
+            "uturn",
+            "bodyslam",
+            "stealthrock"
+        ],
+        "item": "choicescarf",
+        "nature": "jolly",
+        "ability": "serenegrace",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "victini": {
+        "species": "victini",
+        "moves": [
+            "vcreate",
+            "boltstrike",
+            "uturn",
+            "zenheadbutt"
+        ],
+        "item": "choicescarf",
+        "nature": "jolly",
+        "ability": "victorystar",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "clefable": {
+        "species": "clefable",
+        "moves": [
+            "moonblast",
+            "softboiled",
+            "calmmind",
+            "thunderwave"
+        ],
+        "item": "leftovers",
+        "nature": "bold",
+        "ability": "unaware",
+        "evs": [
+            252,
+            0,
+            252,
+            4,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "excadrill": {
+        "species": "excadrill",
+        "moves": [
+            "earthquake",
+            "ironhead",
+            "rockslide",
+            "swordsdance"
+        ],
+        "item": "lifeorb",
+        "nature": "jolly",
+        "ability": "sandrush",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "rotom": {
+        "species": "rotom",
+        "moves": [
+            "voltswitch",
+            "hydropump",
+            "willowisp",
+            "defog"
+        ],
+        "item": "leftovers",
+        "nature": "timid",
+        "ability": "levitate",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "lilligant": {
+        "species": "lilligant",
+        "moves": [
+            "sleeppowder",
+            "petaldance",
+            "hiddenpowerfire",
+            "gigadrain"
+        ],
+        "item": "lifeorb",
+        "nature": "timid",
+        "ability": "chlorophyll",
+        "evs": [
+            0,
+            0,
+            0,
+            252,
+            4,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            30,
+            31,
+            30
+        ]
+    },
+    "mimikyu": {
+        "species": "mimikyu",
+        "moves": [
+            "shadowsneak",
+            "playrough",
+            "swordsdance",
+            "leechlife"
+        ],
+        "item": "lifeorb",
+        "nature": "jolly",
+        "ability": "disguise",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "toxapex": {
+        "species": "toxapex",
+        "moves": [
+            "recover",
+            "haze",
+            "toxicspikes",
+            "scald"
+        ],
+        "item": "blacksludge",
+        "nature": "bold",
+        "ability": "regenerator",
+        "evs": [
+            252,
+            0,
+            252,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "zygarde": {
+        "species": "zygarde",
+        "moves": [
+            "coil",
+            "thousandarrows",
+            "substitute",
+            "outrage"
+        ],
+        "item": "leftovers",
+        "nature": "impish",
+        "ability": "aurabreak",
+        "evs": [
+            248,
+            4,
+            252,
+            0,
+            0,
+            4
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "lopunny": {
+        "species": "lopunny",
+        "moves": [
+            "return",
+            "highjumpkick",
+            "icepunch",
+            "fakeout"
+        ],
+        "item": "lopunnite",
+        "nature": "jolly",
+        "ability": "limber",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "medicham": {
+        "species": "medicham",
+        "moves": [
+            "highjumpkick",
+            "zenheadbutt",
+            "icepunch",
+            "thunderpunch"
+        ],
+        "item": "medichamite",
+        "nature": "jolly",
+        "ability": "purepower",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "metagross": {
+        "species": "metagross",
+        "moves": [
+            "meteormash",
+            "earthquake",
+            "bulletpunch",
+            "agility"
+        ],
+        "item": "metagrossite",
+        "nature": "jolly",
+        "ability": "clearbody",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "manaphy": {
+        "species": "manaphy",
+        "moves": [
+            "tailglow",
+            "surf",
+            "icebeam",
+            "energyball"
+        ],
+        "item": "leftovers",
+        "nature": "timid",
+        "ability": "hydration",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "starmie": {
+        "species": "starmie",
+        "moves": [
+            "rapidspin",
+            "hydropump",
+            "icebeam",
+            "thunderbolt"
+        ],
+        "item": "lifeorb",
+        "nature": "timid",
+        "ability": "analytic",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "gyarados": {
+        "species": "gyarados",
+        "moves": [
+            "dragondance",
+            "waterfall",
+            "icefang",
+            "earthquake"
+        ],
+        "item": "gyaradosite",
+        "nature": "jolly",
+        "ability": "intimidate",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "swampert": {
+        "species": "swampert",
+        "moves": [
+            "waterfall",
+            "earthquake",
+            "icepunch",
+            "stealthrock"
+        ],
+        "item": "swampertite",
+        "nature": "adamant",
+        "ability": "torrent",
+        "evs": [
+            252,
+            252,
+            4,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "ampharos": {
+        "species": "ampharos",
+        "moves": [
+            "thunderbolt",
+            "dragonbreath",
+            "powergem",
+            "voltswitch"
+        ],
+        "item": "ampharosite",
+        "nature": "modest",
+        "ability": "static",
+        "evs": [
+            252,
+            0,
+            0,
+            252,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "camerupt": {
+        "species": "camerupt",
+        "moves": [
+            "fireblast",
+            "earthpower",
+            "flashcannon",
+            "eruption"
+        ],
+        "item": "cameruptite",
+        "nature": "quiet",
+        "ability": "magmaarmor",
+        "evs": [
+            252,
+            0,
+            0,
+            252,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            0
+        ]
+    },
+    "sableye": {
+        "species": "sableye",
+        "moves": [
+            "willowisp",
+            "recover",
+            "foulplay",
+            "taunt"
+        ],
+        "item": "sablenite",
+        "nature": "careful",
+        "ability": "stall",
+        "evs": [
+            252,
+            4,
+            0,
+            0,
+            252,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "altaria": {
+        "species": "altaria",
+        "moves": [
+            "dragondance",
+            "return",
+            "roost",
+            "healbell"
+        ],
+        "item": "altarianite",
+        "nature": "jolly",
+        "ability": "naturalcure",
+        "evs": [
+            248,
+            4,
+            0,
+            0,
+            4,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "absol": {
+        "species": "absol",
+        "moves": [
+            "suckerpunch",
+            "knockoff",
+            "playrough",
+            "swordsdance"
+        ],
+        "item": "absolite",
+        "nature": "jolly",
+        "ability": "pressure",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "lucario": {
+        "species": "lucario",
+        "moves": [
+            "closecombat",
+            "meteormash",
+            "extremespeed",
+            "swordsdance"
+        ],
+        "item": "lucarionite",
+        "nature": "jolly",
+        "ability": "innerfocus",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "gallade": {
+        "species": "gallade",
+        "moves": [
+            "closecombat",
+            "leafblade",
+            "shadowsneak",
+            "swordsdance"
+        ],
+        "item": "galladite",
+        "nature": "jolly",
+        "ability": "steadfast",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "diancie": {
+        "species": "diancie",
+        "moves": [
+            "diamondstorm",
+            "moonblast",
+            "earthpower",
+            "hiddenpowerfire"
+        ],
+        "item": "diancite",
+        "nature": "hasty",
+        "ability": "clearbody",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            30,
+            31,
+            30
+        ]
+    },
+    "charizard": {
+        "species": "charizard",
+        "moves": [
+            "flareblitz",
+            "dragondance",
+            "earthquake",
+            "roost"
+        ],
+        "item": "charizarditex",
+        "nature": "jolly",
+        "ability": "blaze",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "mamoswine": {
+        "species": "mamoswine",
+        "moves": [
+            "iceshard",
+            "earthquake",
+            "iciclecrash",
+            "stealthrock"
+        ],
+        "item": "focussash",
+        "nature": "jolly",
+        "ability": "thickfat",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "sceptile": {
+        "species": "sceptile",
+        "moves": [
+            "leafstorm",
+            "dragonbreath",
+            "focusblast",
+            "substitute"
+        ],
+        "item": "sceptilite",
+        "nature": "timid",
+        "ability": "overgrow",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "swellow": {
+        "species": "swellow",
+        "moves": [
+            "bravebird",
+            "facade",
+            "uturn",
+            "protect"
+        ],
+        "item": "flameorb",
+        "nature": "jolly",
+        "ability": "guts",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "sharpedo": {
+        "species": "sharpedo",
+        "moves": [
+            "protect",
+            "crunch",
+            "icefang",
+            "aquajet"
+        ],
+        "item": "sharpedonite",
+        "nature": "jolly",
+        "ability": "speedboost",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "banette": {
+        "species": "banette",
+        "moves": [
+            "shadowclaw",
+            "suckerpunch",
+            "willowisp",
+            "destinybond"
+        ],
+        "item": "banettite",
+        "nature": "adamant",
+        "ability": "insomnia",
+        "evs": [
+            252,
+            252,
+            4,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "abomasnow": {
+        "species": "abomasnow",
+        "moves": [
+            "blizzard",
+            "iceshard",
+            "woodhammer",
+            "earthpower"
+        ],
+        "item": "abomasite",
+        "nature": "quiet",
+        "ability": "snowwarning",
+        "evs": [
+            252,
+            0,
+            4,
+            252,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            0
+        ]
+    },
+    "audino": {
+        "species": "audino",
+        "moves": [
+            "wish",
+            "healbell",
+            "drainingkiss",
+            "toxic"
+        ],
+        "item": "audinite",
+        "nature": "calm",
+        "ability": "healer",
+        "evs": [
+            252,
+            0,
+            4,
+            0,
+            252,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "hydreigon": {
+        "species": "hydreigon",
+        "moves": [
+            "dracometeor",
+            "darkpulse",
+            "uturn",
+            "fireblast"
+        ],
+        "item": "choicescarf",
+        "nature": "timid",
+        "ability": "levitate",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "silvally": {
+        "species": "silvally",
+        "moves": [
+            "multiattack",
+            "uturn",
+            "partingshot",
+            "thunderbolt"
+        ],
+        "item": "choicescarf",
+        "nature": "jolly",
+        "ability": "rkssystem",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "nihilego": {
+        "species": "nihilego",
+        "moves": [
+            "powergem",
+            "sludgewave",
+            "hiddenpowerice",
+            "thunderbolt"
+        ],
+        "item": "choicescarf",
+        "nature": "timid",
+        "ability": "beastboost",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            30,
+            31,
+            31
+        ]
+    },
+    "golisopod": {
+        "species": "golisopod",
+        "moves": [
+            "firstimpression",
+            "liquidation",
+            "suckerpunch",
+            "leechlife"
+        ],
+        "item": "assaultvest",
+        "nature": "adamant",
+        "ability": "wimpout",
+        "evs": [
+            252,
+            252,
+            4,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "blissey": {
+        "species": "blissey",
+        "moves": [
+            "seismictoss",
+            "softboiled",
+            "teleport",
+            "thunderwave"
+        ],
+        "item": "leftovers",
+        "nature": "bold",
+        "ability": "naturalcure",
+        "evs": [
+            252,
+            0,
+            252,
+            0,
+            4,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "mudsdale": {
+        "species": "mudsdale",
+        "moves": [
+            "earthquake",
+            "heavyslam",
+            "rockslide",
+            "bodyslam"
+        ],
+        "item": "assaultvest",
+        "nature": "adamant",
+        "ability": "stamina",
+        "evs": [
+            252,
+            252,
+            4,
+            0,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "talonflame": {
+        "species": "talonflame",
+        "moves": [
+            "bravebird",
+            "flareblitz",
+            "swordsdance",
+            "roost"
+        ],
+        "item": "sharpbeak",
+        "nature": "adamant",
+        "ability": "galewings",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "cresselia": {
+        "species": "cresselia",
+        "moves": [
+            "moonblast",
+            "psychic",
+            "toxic",
+            "moonlight"
+        ],
+        "item": "leftovers",
+        "nature": "bold",
+        "ability": "levitate",
+        "evs": [
+            252,
+            0,
+            252,
+            4,
+            0,
+            0
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "raikou": {
+        "species": "raikou",
+        "moves": [
+            "thunderbolt",
+            "voltswitch",
+            "aurasphere",
+            "hiddenpowerice"
+        ],
+        "item": "choicespecs",
+        "nature": "timid",
+        "ability": "pressure",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            30,
+            31,
+            31
+        ]
+    },
+    "entei": {
+        "species": "entei",
+        "moves": [
+            "sacredfire",
+            "extremespeed",
+            "stoneedge",
+            "flamecharge"
+        ],
+        "item": "choiceband",
+        "nature": "adamant",
+        "ability": "pressure",
+        "evs": [
+            4,
+            252,
+            0,
+            0,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+        ]
+    },
+    "celebi": {
+        "species": "celebi",
+        "moves": [
+            "nastyplot",
+            "leafstorm",
+            "psyshock",
+            "uturn"
+        ],
+        "item": "lifeorb",
+        "nature": "timid",
+        "ability": "naturalcure",
+        "evs": [
+            4,
+            0,
+            0,
+            252,
+            0,
+            252
+        ],
+        "ivs": [
+            31,
+            0,
+            31,
+            31,
+            31,
+            31
+        ]
     }
 }
