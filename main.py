@@ -20,7 +20,6 @@ def fitness_external(pop):
     list_of_dicts = [[{} for _ in range(N)] for _ in range(N)]
     dmg_matrix = np.array(list_of_dicts, dtype=object)
 
-    print('\nfor every team I compute the fitness')
     for i in tqdm(range(len(pop))):
         for j in range(i+1, len(pop)):
             team_1 = dict_to_team_set(pop[i])
@@ -137,14 +136,14 @@ def tournament_selection(pop, k):
     return pop[min(tournament)], min(tournament)
 
 
-def crossover(parent1, dmg_parent1, parent2, dmg_parent2, CROSSOVER, NUMBER_OF_POKE):
+def crossover(parent1, dmg_parent1, parent2, dmg_parent2, crossover_prob, no_of_poke):
     child_1 = copy.deepcopy(parent1)
     child_2 = copy.deepcopy(parent2)
     savestate_dmg_parent1 = copy.deepcopy(dmg_parent1)
     savestate_dmg_parent2 = copy.deepcopy(dmg_parent2)
 
-    if random.random() <= CROSSOVER:
-        idx = random.randint(0, NUMBER_OF_POKE - 1)
+    if random.random() <= crossover_prob:
+        idx = random.randint(0, no_of_poke - 1)
 
         name_1, name_2 = parent1[idx]['species'], parent2[idx]['species']
 
@@ -172,10 +171,9 @@ def prob_fun(x):
     return (1+(x-1)**3)**(1/3)
 
 
-def mutation(team, damage, prob, domain_all):
+def mutation(team, damage, prob, domain_all, items_all, pokedex_all, natures_all, learnsets_all):
     max_dmg = max(list(damage.values()))
     max_dmg = max_dmg + 0.45*max_dmg
-    # print('\n\nESPERIMENTO', [1 - prob_fun(elem/max_dmg) for elem in list(damage.values())], [poke for poke in list(damage.keys())])
 
     new_team = copy.deepcopy(team)
 
@@ -185,44 +183,53 @@ def mutation(team, damage, prob, domain_all):
         mutation_probability = 1 - prob_fun(damage[pokemon['species']]/max_dmg)
 
         if mutation_poke <= mutation_probability:
-            print('\nMUTATION: TEAM BEFORE', [bap['species'] for bap in team])
-            print('\npokemon to remove', pokemon)
             new_team.remove(pokemon)
             with open('sets.json') as f:
                 standard_set = json.load(f)
             keys = list(standard_set.keys())
-            poke_sample = random.sample(keys, 1)
-            new_pokemon = generate_standard_set(domain_all.index(poke_sample[0]), domain_all, standard_set)
+            poke_sample = random.choice(keys)
+            new_pokemon = generate_standard_set(domain_all.index(poke_sample), domain_all, standard_set)
             new_team.append(new_pokemon)
-            print('\nMUTATION: TEAM AFTER', [bap['species'] for bap in new_team])
         else:
             mutation_move1 = random.random()
+            learnsets_poke = list(learnsets_all[pokemon['species']]['learnset'].keys())
             if mutation_move1 <= prob:
-                print('\n\nmutazione mossa 1')
+                move = random.choice(learnsets_poke)
+                pokemon['moves'][0] = move
             else:
                 mutation_move2 = random.random()
                 if mutation_move2 <= prob:
-                    print('\n\nmutazione mossa 2')
+                    move = random.choice(learnsets_poke)
+                    pokemon['moves'][1] = move
                 else:
                     mutation_move3 = random.random()
                     if mutation_move3 <= prob:
-                        print('\n\nmutazione mossa 3')
+                        move = random.choice(learnsets_poke)
+                        pokemon['moves'][2] = move
                     else:
                         mutation_move4 = random.random()
                         if mutation_move4 <= prob:
-                            print('\n\nmutazione mossa 4')
+                            move = random.choice(learnsets_poke)
+                            pokemon['moves'][3] = move
 
             mutation_item = random.random()
             if mutation_item <= prob:
-                print('\n\nmutazione item')
+                items_poke = list(items_all.keys())
+                item = random.choice(items_poke)
+                pokemon['item'] = item
 
             mutation_ability = random.random()
             if mutation_ability <= prob:
-                print('\n\nmutazione abilità')
+                abilities_poke = list(pokedex_all[pokemon['species']]['abilities'].items())
+                abilities_poke = [tmp[1] for tmp in abilities_poke]
+                ability = random.choice(abilities_poke)
+                pokemon['ability'] = ability.lower().replace(' ', '')
 
             mutation_nature = random.random()
             if mutation_nature <= prob:
-                print('\n\nmutazione natura')
+                natures_poke = list(natures_all.keys())
+                nature = random.choice(natures_poke)
+                pokemon['nature'] = nature
 
     if is_team_valid(new_team):
         return new_team
@@ -253,40 +260,46 @@ def init_population(pop_dim: int, number_of_poke: int, domain_all):
 
 
 if __name__ == '__main__':
-    MAX_GENERATIONS = 10
-    POP_DIM = 10
+    MAX_GENERATIONS = 100
+    POP_DIM = 20
     NUMBER_OF_POKE = 3
     ELITISM = 4
     TOURNAMENT = 5
     CROSSOVER = 0.4
     MUTATION = 0.05
+    TIME = False
+
+    if TIME:
+        time_now = time.time()
+        time_txt = open(f'time{time_now}.txt', 'w')
+        time_txt.write(f'Number of inidivuals: {POP_DIM}\nNumber of generations: {MAX_GENERATIONS}\nNumber of pokemon '
+                       f'per team: {NUMBER_OF_POKE}\nSome other interesting values:\n  Elitism: {ELITISM}\n'
+                       f'  Tournament sel.: {TOURNAMENT}\n  Crossover: {CROSSOVER}\n  Mutation: {MUTATION}\n\n')
 
     start = time.time()
     (domain_all, items_all, abilities_all, pokedex_all, natures_all, moves_all, learnsets_all, inverse_items_all,
      inverse_abilities_all, inverse_pokedex_all, inverse_natures_all, inverse_moves_all) = import_data()
     end = time.time()
-    print('\nTime needed for import data:', end-start)
+    if TIME: time_txt.write(f'Time needed for import data: {end-start}\n\n')
 
     # population init
     start = time.time()
     population = init_population(POP_DIM, NUMBER_OF_POKE, domain_all)
     end = time.time()
-    print('\nTime needed for init population:', end - start)
+    if TIME: time_txt.write(f'Time needed for init population: {end - start}\n\n')
 
     # population fitness
     start = time.time()
     total_fitness, dmg_matrix = fitness(population, pokedex_all)
     end = time.time()
-    print('\nTime needed for fitness computation:', end - start)
+    if TIME: time_txt.write(f'Time needed for fitness computation: {end - start}\n\nIteration loop\n')
 
     dmg_vector = damage_vector_create(population, dmg_matrix)
 
     # in this variable we save the best fitness through the generations
     best_fitness = [max(total_fitness)]
 
-    for gen in range(MAX_GENERATIONS):
-
-        print('Generation', gen, 'of', MAX_GENERATIONS, '(', (gen/MAX_GENERATIONS)*100, '%)')
+    for gen in tqdm(range(MAX_GENERATIONS)):
 
         # sort current population by fitness score
         tmp = zip(total_fitness, population, dmg_vector)
@@ -300,6 +313,7 @@ if __name__ == '__main__':
         new_population[0:ELITISM] = population[0:ELITISM]
 
         # tournament selection for the next gen
+        start = time.time()
         for _ in range(int((POP_DIM-ELITISM)/2)):
             parent_1, idx_1 = tournament_selection(population, TOURNAMENT)
             parent_2, idx_2 = tournament_selection(population, TOURNAMENT)
@@ -312,17 +326,22 @@ if __name__ == '__main__':
             child_1, child_2, dmg_c1, dmg_c2 = crossover(parent_1, dmg_p1, parent_2, dmg_p2, CROSSOVER, NUMBER_OF_POKE)
 
             # mutation (using the children's new damage vectors)
-            child_1 = mutation(child_1, dmg_c1, MUTATION, domain_all)
-            child_2 = mutation(child_2, dmg_c2, MUTATION, domain_all)
+            child_1 = mutation(child_1, dmg_c1, MUTATION, domain_all, items_all, pokedex_all, natures_all, learnsets_all)
+            child_2 = mutation(child_2, dmg_c2, MUTATION, domain_all, items_all, pokedex_all, natures_all, learnsets_all)
 
             new_population.append(child_1)
             new_population.append(child_2)
-            # The damage vectors for the children must be stored. You need a list for them.
-            # new_dmg_vectors.append(dmg_c1)
-            # new_dmg_vectors.append(dmg_c2)
+
+        end = time.time()
+        if TIME: time_txt.write(f'Time needed for genetic loop (tournament, crossover, mutation): {end-start}\n\n')
 
         population = new_population
+
+        start = time.time()
         total_fitness, dmg_matrix = fitness(population, pokedex_all)
+        end = time.time()
+        if TIME: time_txt.write(f'Time needed for fitness computation: {end - start}\n\n')
+
         dmg_vector = damage_vector_create(population, dmg_matrix)
         best_fitness.append(max(total_fitness))
 
