@@ -24,7 +24,7 @@ import random
 import copy
 from tqdm import tqdm
 import sim.sim as sim
-from team_generation import generate_pokemon, prob_fun, is_team_valid
+from utility_functions import generate_pokemon, prob_fun, is_team_valid
 from sim.structs import dict_to_team_set, Battle
 
 

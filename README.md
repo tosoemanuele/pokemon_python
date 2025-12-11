@@ -47,7 +47,7 @@ TotalFitness = Fitness<sub>External</sub> + 0.5 × Fitness<sub>Internal</sub>
 pokemon_evo_alg
 ├── main.py                  # logic of the program
 ├── genetic_algorithm.py     # GA functions
-├── team_generation.py       # utility functions
+├── utility_functions.py     # utility functions
 ├── trial_team.json          # trial team to import
 ├── data                     # folder where Pokémon data is stored
 ├── sim                      # folder where simulation logic is stored

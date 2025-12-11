@@ -13,7 +13,7 @@ from tqdm import tqdm
 import time
 from genetic_algorithm import fitness, tournament_selection
 from genetic_algorithm import crossover, mutation, trial_team_battle, init_population
-from team_generation import import_data, damage_vector_create
+from utility_functions import import_data, damage_vector_create
 
 
 if __name__ == '__main__':
