@@ -1,27 +1,27 @@
 {
-    "zekrom": {
-        "species": "zekrom",
-        "moves": ["fusionbolt", "outrage", "boltstrike", "substitute"],
-        "item": "choiceband",
-        "nature": "jolly",
-        "ability": "teravolt",
-        "evs": [0, 252, 4, 0, 0, 252],
-        "ivs": [31, 31, 31, 31, 31, 31]},
+    "yveltal": {
+        "species": "yveltal",
+        "moves": ["shadowball", "darkpulse", "oblivionwing", "psychic"],
+        "item": "iapapaberry",
+        "nature": "timid",
+        "ability": "darkaura",
+        "evs": [4, 0, 0, 252, 0, 252],
+        "ivs": [31, 0, 31, 31, 31, 31]},
     "magearna": {
         "species": "magearna",
-        "moves": ["fleurcannon", "flashcannon", "aurasphere", "voltswitch"],
-        "item": "choicespecs",
+        "moves": ["fleurcannon", "flashcannon", "icebeam", "voltswitch"],
+        "item": "assaultvest",
         "nature": "modest",
         "ability": "soulheart",
-        "evs": [252, 0, 4, 252, 0, 0],
+        "evs": [248, 0, 72, 0, 188, 0],
         "ivs": [31, 0, 31, 31, 31,31]},
-    "metagross":{
-        "species": "metagross",
-        "moves": ["meteormash", "earthquake", "bulletpunch", "agility"],
-        "item": "metagrossite",
+    "kangaskhan":{
+        "species": "kangaskhan",
+        "moves": ["doubleedge", "earthquake", "poweruppunch", "firepunch"],
+        "item": "kangaskhanite",
         "nature": "jolly",
-        "ability": "clearbody",
-        "evs": [4, 252, 0, 0, 0, 252],
+        "ability": "scrappy",
+        "evs": [12, 244, 4, 0, 4, 252],
         "ivs": [31, 31, 31, 31, 31, 31]}
 
 }

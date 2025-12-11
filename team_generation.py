@@ -1,12 +1,34 @@
+"""
+Emanuele Toso SM3800114
+
+.py
+
+This file contains all the useful functions used in main.py and genetic_algorithm.py
+
+import_data()
+damage_vector_create()
+prob_fun()
+is_team_valid()
+generate_pokemon()
+
+The description of each function is written under the definition
+"""
+
 import random
 import json
-import numpy
 import re
-import os
+import numpy as np
 from data import dex
 
 
 def import_data():
+    """
+    Input:
+    Output: a lot of dictionaries
+
+    This function loads all the json files in the data folder so that they are faster to access when needed
+
+    """
     with open('data/domains/all.json') as f:
         domain_all = json.load(f)
     with open('data/items.json') as f:
@@ -32,9 +54,72 @@ def import_data():
             inverse_items_all, inverse_abilities_all, inverse_pokedex_all, inverse_natures_all, inverse_moves_all)
 
 
+def damage_vector_create(pop, dmg_matrix):
+    """
+    Inputs: population, damage matrix
+    Output: damage vector
+
+    This function creates the damage vector starting from the damage matrix and the population
+    Each index of the population array has its entry in the damage vector at the same index. For every individual, we
+    save a dictionary of {'pokemon_name': damage_dealt, 'pokemon_name': damage_dealt, ...}
+    The damage dealt is computed by the mean of the damages against the other teams. The damage for each pokémon against
+    each other team is the sum of the damages during the 100 battles weighted by the number of battles
+    it participated in.
+
+    """
+
+    N = len(pop)
+    list_of_dicts = [{} for _ in range(N)]
+    dmg_vector = np.array(list_of_dicts, dtype=object)
+
+    for i in range(len(pop)):
+        dmg_vector[i] = {pokemon['species']: 0.0 for pokemon in pop[i]}
+
+        tmp_dmg_i = {}
+
+        for j in range(len(pop)):
+            # for every pokemon in battles i, j we save the average damage rate
+            for key in dmg_matrix[i, j].keys():
+
+                if key not in tmp_dmg_i:
+                    tmp_dmg_i[key] = np.zeros(len(pop), dtype=float)
+
+                if dmg_matrix[i, j][key]['no_of_battles'] > 0:
+                    tmp_dmg_i[key][j] = dmg_matrix[i, j][key]['dmg'] / dmg_matrix[i, j][key]['no_of_battles']
+
+        for key in tmp_dmg_i.keys():
+            avg_damage = sum(tmp_dmg_i[key]) / (len(pop) - 1)
+            dmg_vector[i][key] = avg_damage
+
+    return dmg_vector
+
+
+def prob_fun(x):
+    """
+    Input: x
+    Output: (1+(x-1)**3)**(1/3)
+
+    This function is a transformation of the input based on the geometrical shape of the superellipse.
+    The input is the fitness function, it's always between 0 and 1. This transformation ensures that pokémon with
+    high damage are given a similar score and that is always between 0 and 1. On the other hand, pokémon with very low
+    damage are given a low score and so a bigger mutation probability.
+
+    """
+    return (1+(x-1)**3)**(1/3)
+
+
 def is_team_valid(team):
-    # this function has a team as input (in the sense of the gen evo)
-    # and checks if it's valid. this means that the ability and moves are feasible and no dupes
+    """
+    Input: individual
+    Output: True/False
+
+    This function checks if a team is feasible or not.
+    Right now this means only that there are no duplicate pokémon.
+
+    In the future we could add the feasibility of the moves (i.e. if the moves are duplicate and if a pokémon can
+    learn those moves), the feasibility of the abilities etc.
+
+    """
 
     encountered_poke = set()
     for pokemon in team:
@@ -43,26 +128,26 @@ def is_team_valid(team):
         else:
             encountered_poke.add(pokemon['species'])
 
-    # here I should check for feasibility of moves
-
     return True
 
 
-def generate_standard_set(pokemon_number: int, domain_all, standard_set):
-
-    # TODO
-    # BISOGNA TROVARE IL MODO DI NON RENDERE LE COSE CASE SENSITIVE
-    # il problema è che caricando direttamente da standard_set va
-    # poi messo tutto a lower dopo aver creato il pokemon
-    # oppure ci fidiamo che in sets.json sia scritto tutto bene
-
-    pokedex = list(domain_all)
-
-    pokemon = standard_set[pokedex[pokemon_number]]
-
-    return pokemon
-
 def generate_pokemon(pokemon_number : int, domain_all):
+    """
+
+    Inputs: pokémon number, dictionary with every pokémon's data (name, types, abilities, etc)
+    Output: dictionary with the following properties:
+        'species': the name of the pokémon, useful for finding the properties of that pokémon in the other json files
+        'moves': list of the names of the 4 moves
+        'item': name of the held item of the pokémon
+        'nature': nature of the pokémon; each nature gives a 10% increase and a 10% decrease on a statistic
+        'ability': ability of the pokémon
+        'evs'
+        'ivs'
+
+    This function is based on the existing function generate_team() inside of tools/pick_six.py file
+
+    """
+
     pokemon = {}
     pokedex = list(domain_all)
     items = list(dex.item_dex.keys())
@@ -86,7 +171,7 @@ def generate_pokemon(pokemon_number : int, domain_all):
 
     abilities = [re.sub(r'\W+', '', ability.lower()) for ability in
                  list(filter(None.__ne__, list(dex.pokedex[pokemon['species']].abilities)))]
-    # print(str(abilities))
+
     r = random.randint(0, len(abilities) - 1)
     pokemon['ability'] = abilities[r]
 
@@ -104,6 +189,21 @@ def generate_pokemon(pokemon_number : int, domain_all):
 
 
 # |--------- OLD OR UNUSED FUNCTIONS (MAY NEED FOR LATER) -----------|
+
+
+def generate_standard_set(pokemon_number: int, domain_all, standard_set):
+
+    # TODO
+    # BISOGNA TROVARE IL MODO DI NON RENDERE LE COSE CASE SENSITIVE
+    # il problema è che caricando direttamente da standard_set va
+    # poi messo tutto a lower dopo aver creato il pokemon
+    # oppure ci fidiamo che in sets.json sia scritto tutto bene
+
+    pokedex = list(domain_all)
+
+    pokemon = standard_set[pokedex[pokemon_number]]
+
+    return pokemon
 
 
 def array_to_dict(pokemon_arr, inv_items, inv_abilities, inv_pokedex, inv_natures, inv_moves):

@@ -1,4 +1,4 @@
-'''
+"""
 Nicolas Lindbloom-Airey
 
 player.py
@@ -10,7 +10,7 @@ FUNCTIONS:
     switch
     default_decide
     pokemon_left
-'''
+"""
 import sys
 from sim.pokemon import *
 
