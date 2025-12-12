@@ -144,4 +144,4 @@ if __name__ == '__main__':
             break
 
     # Print the best individual
-    print('\nER MEJO\n', best_team)
+    print('\nBEST TEAM AFTER GENETIC ALGORITHM\n', best_team)
